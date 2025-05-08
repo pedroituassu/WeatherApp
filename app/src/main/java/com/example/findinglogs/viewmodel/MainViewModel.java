@@ -44,7 +44,7 @@ public class MainViewModel extends AndroidViewModel {
         handler.postDelayed(fetchRunnable, FETCH_INTERVAL);
     }
 
-    private void fetchAllForecasts() {
+    public void fetchAllForecasts() {
         if (Logger.ISLOGABLE) Logger.d(TAG, "fetchAllForecasts()");
         HashMap<String, String> localizations = mRepository.getLocalizations();
         List<Weather> updatedList = new ArrayList<>();
